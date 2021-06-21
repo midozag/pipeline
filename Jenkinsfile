@@ -3,7 +3,8 @@ node{
      git 'https://github.com/midozag/pipeline'
   }
   stage('Compile-Package'){
-     sh 'mvn package'
+     def mvnHome = tool name: 'maven-3', type: 'maven'
+     sh "${mvnHome}/bin/mvn package"
   }
 
 }
