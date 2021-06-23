@@ -10,6 +10,15 @@
       pip:
         name: docker-py
         state: present
+    - name: Install Docker
+      yum:
+        name: docker
+        state: present
+    - name: start docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
     - name: Start the container
       docker_container:
         name: midoapp
