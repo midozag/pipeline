@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+      stage("Git checkout"){
+          steps{
+            git credentialsId: 'github', url: 'https://github.com/midozag/pipeline'  
+          }
+      }  
+        
+        
+    }
+    
+    
+    
+}
