@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeapp
+  labels:
+    app: nodeapp
+spec:
+  containers:
+    - name: nodeapp
+      image: zag2020/midoapp:v1
+      ports:
+        - containerPort: 8080
